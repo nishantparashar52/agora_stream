@@ -11,6 +11,7 @@ const RTMP = () => {
   const { client, localUid } = useContext(RtcContext)
   const max = useContext(MaxUidContext);
   const min = useContext(MinUidContext);
+  const [totalUsers, setTotalUsers] = useState(0)
 
   useEffect(() => {
     client.on('live-streaming-error', (e) =>
@@ -23,6 +24,7 @@ const RTMP = () => {
   }, []);
 
   useEffect(() => {
+    setTotalUsers(min.length)
     if (isStreaming) {
       transcode();
     }
@@ -96,6 +98,7 @@ const RTMP = () => {
         }
       }}>
         {isBtnDisabled ? 'Working...' : isStreaming ? 'Stop Streaming to CDN' : 'Start Streaming to CDN'}
+        <div>Users Count { totalUsers}</div>
       </div>
   )
 }
