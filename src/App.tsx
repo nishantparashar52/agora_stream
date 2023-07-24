@@ -21,8 +21,8 @@ const App: React.FunctionComponent = () => {
           <PropsContext.Provider value={{
             rtcProps: {
               appId: process.env.REACT_APP_APPID || '526b5d98970e4093b953bd95e54a737a',
-              channel: process.env.REACT_APP_CHANNEL || 'nis',
-              token: '007eJxTYFgef8v3R4zu8f65YjsiXLc3f/nALRLu5H9mEbMrQ76gKpMCg6mRWZJpiqWFpblBqomBpXGSpalxUoqlaaqpSaK5sXkie/G2lIZARobFpocYGKEQxGdmyMssZmAAAIe7HDg=',
+              channel: process.env.REACT_APP_CHANNEL || 'nn',
+              token: process.env.REACT_APP_TOKEN || '007eJxTYFh8+07b9FzRmYksK3+WmEU5Bkt0zPYOeqPbHKbk2pPYXqfAYGpklmSaYmlhaW6QamJgaZxkaWqclGJpmmpqkmhubJ7YKbovpSGQkcHV+z0LIwMEgvhMDHl5DAwAlsccpA==',
               role: isHost ? 'host' : 'audience',
               layout: isPinned ? layout.pin : layout.grid
             },
