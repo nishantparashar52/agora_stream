@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { PropsContext, GridVideo, layout, LocalControls, PinnedVideo, RtcConfigure, TracksConfigure } from 'agora-react-uikit'
+
 import 'agora-react-uikit/dist/index.css'
 import RTMP from './RTMP'
 
@@ -8,6 +9,7 @@ const App: React.FunctionComponent = () => {
   const [isHost, setHost] = useState(true)
   const [isPinned, setPinned] = useState(false)
 
+  console.log(process.env.REACT_APP_TOKEN)
   return (
     <div style={styles.container}>
       <div style={styles.videoContainer}>
@@ -24,7 +26,8 @@ const App: React.FunctionComponent = () => {
               channel: process.env.REACT_APP_CHANNEL || 'nn',
               token: process.env.REACT_APP_TOKEN || '007eJxTYFh8+07b9FzRmYksK3+WmEU5Bkt0zPYOeqPbHKbk2pPYXqfAYGpklmSaYmlhaW6QamJgaZxkaWqclGJpmmpqkmhubJ7YKbovpSGQkcHV+z0LIwMEgvhMDHl5DAwAlsccpA==',
               role: isHost ? 'host' : 'audience',
-              layout: isPinned ? layout.pin : layout.grid
+              layout: isPinned ? layout.pin : layout.grid,
+              uid:1
             },
             styleProps: {
               gridVideoContainer: { 'height': '90%' },
