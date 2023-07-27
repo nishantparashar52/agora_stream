@@ -6,7 +6,7 @@ import RTMP from './RTMP'
 
 const App: React.FunctionComponent = () => {
   const [videocall, setVideocall] = useState(true)
-  const [isHost, setHost] = useState(true)
+  const [isHost, setHost] = useState(false)
   const [isPinned, setPinned] = useState(false)
 
   console.log(process.env.REACT_APP_TOKEN)
@@ -27,7 +27,6 @@ const App: React.FunctionComponent = () => {
               token: process.env.REACT_APP_TOKEN || '007eJxTYFh8+07b9FzRmYksK3+WmEU5Bkt0zPYOeqPbHKbk2pPYXqfAYGpklmSaYmlhaW6QamJgaZxkaWqclGJpmmpqkmhubJ7YKbovpSGQkcHV+z0LIwMEgvhMDHl5DAwAlsccpA==',
               role: isHost ? 'host' : 'audience',
               layout: isPinned ? layout.pin : layout.grid,
-              uid:1
             },
             styleProps: {
               gridVideoContainer: { 'height': '90%' },
