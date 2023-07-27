@@ -1,7 +1,7 @@
 import { MaxUidContext, MinUidContext, RtcContext } from 'agora-react-uikit';
 import { useContext, useEffect, useState } from 'react';
 
-const RTMPUrl = process.env.REACT_APP_RTMP || 'rtmp://bom01.contribute.live-video.net/app/live_934376533_8llcYBz3bOzawdO3UCsoJjWMKcg2C9'
+const RTMPUrl = 'rtmp://bom01.contribute.live-video.net/app/live_934376533_8llcYBz3bOzawdO3UCsoJjWMKcg2C9'
 const W = 1280
 const H = 720
 
@@ -63,7 +63,7 @@ const RTMP = () => {
       videoFramerate: 30,
       backgroundColor: 0x000000,
       watermark: {
-        url: '',
+        url: 'dhjfvads',
         x: 10,
         y: 10,
         width: 200,
